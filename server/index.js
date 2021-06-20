@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send({ express: 'welcome logesh ;-)' });
+  res.send({ heroku: 'welcome logesh :-)' });
 });
 
 const PORT = process.env.PORT || 5000;
