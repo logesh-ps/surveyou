@@ -5,21 +5,26 @@
   "main": "index.js",
   "engines": {
     "node": "12.16.0",
-    "npm": "6.14.4"
+    "npm": "7.17.0"
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^6.2.0",
     "cookie-session": "^1.4.0",
     "express": "^4.17.1",
+    "install": "^0.13.0",
     "mongoose": "^5.12.14",
     "nodemon": "^2.0.7",
     "passport": "^0.4.1",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-google-oauth20": "^2.0.0",
+    "prettier": "^2.3.1"
   },
   "devDependencies": {
     "eslint": "^7.29.0",
