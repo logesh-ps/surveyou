@@ -12,7 +12,7 @@ export class Payments extends PureComponent {
         name="Surveyou"
         description="1 Credit for 1$"
         token={(token) => handleStripeToken(token)}
-        stripeKey={process.env.REACT_APP_STRIPE_KEY}
+        stripeKey={process.env.STRIPE_PUBLISHABLE_KEY}
       >
         <button className="btn">Add Credits</button>
       </StripeCheckout>
