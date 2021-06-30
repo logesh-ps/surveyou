@@ -13,7 +13,6 @@ module.exports = (app) => {
     })
       .catch(async () => {
         // Handling success in catch block due to this error - 'As per Indian regulations, export transactions require a customer name and address. More info here: https://stripe.com/docs/india-exports',
-        console.log('req.user: ', req.user);
         req.user.credits += 1;
         const user = await req.user.save();
 

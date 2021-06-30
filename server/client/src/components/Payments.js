@@ -5,7 +5,6 @@ import * as actions from "../actions";
 
 export class Payments extends PureComponent {
   render() {
-    console.log('process.env: ', process.env);
     const { handleStripeToken } = this.props;
     return (
       <StripeCheckout
