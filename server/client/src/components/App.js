@@ -3,11 +3,10 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { connect } from "react-redux";
 
 import * as actions from "../actions";
+import Dashboard from "./Dashboard";
 import Header from "./Header";
 import Landing from "./Landing";
-
-const Surveys = () => <h1>Dashboard</h1>;
-const NewSurvey = () => <h1>NewSurvey Form</h1>;
+import NewSurvey from "./surveys/New";
 
 class App extends PureComponent {
   componentDidMount() {
@@ -22,7 +21,7 @@ class App extends PureComponent {
           <div>
             <Header />
             <Route exact path="/" component={Landing} />
-            <Route exact path="/surveys" component={Surveys} />
+            <Route exact path="/surveys" component={Dashboard} />
             <Route exact path="/survey/new" component={NewSurvey} />
           </div>
         </BrowserRouter>

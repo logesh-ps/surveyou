@@ -11,3 +11,10 @@ export const handleStripeToken = (token) => async (dispatch) => {
   const response = await axios.post("/api/stripe", token);
   dispatch({ type: ACTION_TYPES.SET_USER, payload: response.data });
 };
+
+export const createSurvey = (payload, history) => async (dispatch) => {
+  const response = await axios.post("/api/surveys", payload);
+
+  history.push("/surveys");
+  dispatch({ type: ACTION_TYPES.SET_USER, payload: response.data });
+};
