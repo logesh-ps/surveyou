@@ -1,5 +1,6 @@
 const ACTION_TYPES = {
   SET_USER: "SET_USER",
+  SET_SURVEYS: "SET_SURVEYS",
 };
 
 export default ACTION_TYPES;
